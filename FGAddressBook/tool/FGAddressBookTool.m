@@ -10,7 +10,7 @@
 
 @implementation FGAddressBookTool
 
-+ (UIAlertController *)showAletr:(NSString *)title
++ (UIAlertController *)showAlert:(NSString *)title
                              msg:(NSString *)msg
                        leftTitle:(NSString *)left
                       leftAction:(void (^)(void))leftAction

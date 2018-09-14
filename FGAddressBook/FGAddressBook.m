@@ -6,8 +6,7 @@
 //  Copyright © 2018年 HuaZhongShiXun. All rights reserved.
 //
 
-#import "FGAddressbook.h"
-#import "FGAddressBookModel.h"
+#import "FGAddressBook.h"
 #import "FGAddressBookTool.h"
 #ifdef __IPHONE_9_0
     #import <Contacts/Contacts.h>
@@ -96,7 +95,7 @@ void addressbookChangeHandler(ABAddressBookRef addressBook, CFDictionaryRef info
     if (@available(iOS 9, *)) {
         CNAuthorizationStatus status = [CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts];
         if(status == CNAuthorizationStatusNotDetermined) {
-            [FGAddressBookTool showAletr:@"开启通讯录权限"
+            [FGAddressBookTool showAlert:@"开启通讯录权限"
                              msg:@"首次启动需要开启通讯录权限"
                        leftTitle:@"取消"
                       leftAction:^{
@@ -121,7 +120,7 @@ void addressbookChangeHandler(ABAddressBookRef addressBook, CFDictionaryRef info
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
         ABAuthorizationStatus status = ABAddressBookGetAuthorizationStatus();
         if(status == kABAuthorizationStatusNotDetermined) {
-            [FGAddressBookTool showAletr:@"开启通讯录权限"
+            [FGAddressBookTool showAlert:@"开启通讯录权限"
                              msg:@"首次启动需要开启通讯录权限"
                        leftTitle:@"取消"
                       leftAction:^{
@@ -171,13 +170,16 @@ void addressbookChangeHandler(ABAddressBookRef addressBook, CFDictionaryRef info
     NSMutableArray<FGAddressBookModel *> *array = [NSMutableArray<FGAddressBookModel *> array];
     NSArray *propertys = @[CNContactGivenNameKey,
                            CNContactFamilyNameKey,
-                           CNContactPhoneNumbersKey];
+                           CNContactPhoneNumbersKey,
+                           CNContactImageDataKey,
+                           CNContactThumbnailImageDataKey];
     CNContactFetchRequest *request = [[CNContactFetchRequest alloc] initWithKeysToFetch:propertys];
     [self.store enumerateContactsWithFetchRequest:request error:nil usingBlock:^(CNContact *contact, BOOL *stop) {
         NSString *firstName = contact.familyName;
         NSString *givenName = contact.givenName;
         NSString *fullName = [NSString stringWithFormat:@"%@%@",firstName,givenName];
-        
+        UIImage *image = [[UIImage alloc] initWithData:contact.imageData];
+        UIImage *thumbnailImage = [[UIImage alloc] initWithData:contact.thumbnailImageData];
         NSArray *phones = contact.phoneNumbers;
         for(CNLabeledValue *tag in phones) {
             CNPhoneNumber *number = tag.value;
@@ -192,6 +194,10 @@ void addressbookChangeHandler(ABAddressBookRef addressBook, CFDictionaryRef info
                     FGAddressBookModel *model = [[FGAddressBookModel alloc] init];
                     model.name = fullName;
                     model.phone = phone;
+                    model.imageData = contact.imageData;
+                    model.image = image;
+                    model.thumbnailImageData = contact.thumbnailImageData;
+                    model.thumbnailImage = thumbnailImage;
                     [array addObject:model];
                 }
             }
@@ -223,6 +229,10 @@ void addressbookChangeHandler(ABAddressBookRef addressBook, CFDictionaryRef info
             lastName = @"";
         }
         NSString *name = [NSString stringWithFormat:@"%@%@",firstName,lastName];
+        NSData *imageData = (__bridge NSData *)ABRecordCopyValue(recordRef, kABPersonImageFormatThumbnail);
+        NSData *thumbnailImageData = (__bridge NSData *)ABRecordCopyValue(recordRef, kABPersonImageFormatOriginalSize);
+        UIImage *image = [[UIImage alloc] initWithData:imageData];
+        UIImage *thumbnailImage = [[UIImage alloc] initWithData:thumbnailImageData];
         ABMultiValueRef phonesRef = ABRecordCopyValue(recordRef, kABPersonPhoneProperty);
         NSInteger phoneCount = ABMultiValueGetCount(phonesRef);
         for(int j = 0; j < phoneCount; j++) {
@@ -238,6 +248,10 @@ void addressbookChangeHandler(ABAddressBookRef addressBook, CFDictionaryRef info
                     FGAddressBookModel *model = [[FGAddressBookModel alloc] init];
                     model.name = name;
                     model.phone = phone;
+                    model.imageData = imageData;
+                    model.image = image;
+                    model.thumbnailImageData = thumbnailImageData;
+                    model.thumbnailImage = thumbnailImage;
                     [array addObject:model];
                 }
             }

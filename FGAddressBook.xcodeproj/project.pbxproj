@@ -14,7 +14,7 @@
 		C3D152D7214BC04B00CDEDAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3D152D5214BC04B00CDEDAB /* LaunchScreen.storyboard */; };
 		C3D152DA214BC04B00CDEDAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D152D9214BC04B00CDEDAB /* main.m */; };
 		C3D152E8214BC18800CDEDAB /* FGAddressBookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D152E2214BC18700CDEDAB /* FGAddressBookModel.m */; };
-		C3D152E9214BC18800CDEDAB /* FGAddressbook.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D152E4214BC18800CDEDAB /* FGAddressbook.m */; };
+		C3D152E9214BC18800CDEDAB /* FGAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D152E4214BC18800CDEDAB /* FGAddressBook.m */; };
 		C3D152EA214BC18800CDEDAB /* FGAddressBookTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D152E7214BC18800CDEDAB /* FGAddressBookTool.m */; };
 		C3D152EE214BC3FE00CDEDAB /* NSString+Chinese.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D152ED214BC3FD00CDEDAB /* NSString+Chinese.m */; };
 /* End PBXBuildFile section */
@@ -32,8 +32,8 @@
 		C3D152D9214BC04B00CDEDAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C3D152E1214BC18700CDEDAB /* FGAddressBookModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGAddressBookModel.h; sourceTree = "<group>"; };
 		C3D152E2214BC18700CDEDAB /* FGAddressBookModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGAddressBookModel.m; sourceTree = "<group>"; };
-		C3D152E3214BC18700CDEDAB /* FGAddressbook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGAddressbook.h; sourceTree = "<group>"; };
-		C3D152E4214BC18800CDEDAB /* FGAddressbook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGAddressbook.m; sourceTree = "<group>"; };
+		C3D152E3214BC18700CDEDAB /* FGAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGAddressBook.h; sourceTree = "<group>"; };
+		C3D152E4214BC18800CDEDAB /* FGAddressBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGAddressBook.m; sourceTree = "<group>"; };
 		C3D152E6214BC18800CDEDAB /* FGAddressBookTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGAddressBookTool.h; sourceTree = "<group>"; };
 		C3D152E7214BC18800CDEDAB /* FGAddressBookTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGAddressBookTool.m; sourceTree = "<group>"; };
 		C3D152EC214BC3FD00CDEDAB /* NSString+Chinese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Chinese.h"; sourceTree = "<group>"; };
@@ -91,8 +91,8 @@
 				C3D152E5214BC18800CDEDAB /* tool */,
 				C3D152E1214BC18700CDEDAB /* FGAddressBookModel.h */,
 				C3D152E2214BC18700CDEDAB /* FGAddressBookModel.m */,
-				C3D152E3214BC18700CDEDAB /* FGAddressbook.h */,
-				C3D152E4214BC18800CDEDAB /* FGAddressbook.m */,
+				C3D152E3214BC18700CDEDAB /* FGAddressBook.h */,
+				C3D152E4214BC18800CDEDAB /* FGAddressBook.m */,
 			);
 			path = FGAddressBook;
 			sourceTree = "<group>";
@@ -189,7 +189,7 @@
 				C3D152CF214BC04900CDEDAB /* ViewController.m in Sources */,
 				C3D152EE214BC3FE00CDEDAB /* NSString+Chinese.m in Sources */,
 				C3D152DA214BC04B00CDEDAB /* main.m in Sources */,
-				C3D152E9214BC18800CDEDAB /* FGAddressbook.m in Sources */,
+				C3D152E9214BC18800CDEDAB /* FGAddressBook.m in Sources */,
 				C3D152CC214BC04900CDEDAB /* AppDelegate.m in Sources */,
 				C3D152E8214BC18800CDEDAB /* FGAddressBookModel.m in Sources */,
 			);

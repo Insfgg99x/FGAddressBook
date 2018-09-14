@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-@class FGAddressBookModel;
+#import "FGAddressBookModel.h"
+#import "FGAddressBookTool.h"
 
 typedef void(^FGAddressBookChangeHandler) (NSArray<FGAddressBookModel *> *items);
 

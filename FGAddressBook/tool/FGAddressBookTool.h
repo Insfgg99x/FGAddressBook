@@ -21,7 +21,7 @@
  *  @param right       右侧按钮标题
  *  @param rightAction 右侧按钮动作
  */
-+(UIAlertController *)showAletr:(NSString *)title
++(UIAlertController *)showAlert:(NSString *)title
                             msg:(NSString *)msg
                       leftTitle:(NSString *)left
                      leftAction:(void(^)(void))leftAction

@@ -36,4 +36,8 @@
     }
 }
 
+- (NSString *)description {
+    return [NSString stringWithFormat:@"姓名：%@ 电话：%@",self.phone, self.name];
+}
+
 @end

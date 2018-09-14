@@ -7,12 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface FGAddressBookModel : NSObject
 
-@property(nonatomic,copy)NSString *phone;
-@property(nonatomic,copy)NSString *name;
-@property(nonatomic,copy)NSString *headimg;
+@property(nonatomic, copy)NSString *phone;
+@property(nonatomic, copy)NSString *name;
+@property(nonatomic, strong)NSData *imageData;
+@property(nonatomic, strong)UIImage *image;
+@property(nonatomic, strong)NSData *thumbnailImageData;
+@property(nonatomic, strong)UIImage *thumbnailImage;
+
 
 - (NSComparisonResult)sort:(FGAddressBookModel *)other;
 
