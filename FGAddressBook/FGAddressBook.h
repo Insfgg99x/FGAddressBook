@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "FGAddressBookModel.h"
 #import "FGAddressBookTool.h"
+#import "NSString+Chinese.h"
 
 typedef void(^FGAddressBookChangeHandler) (NSArray<FGAddressBookModel *> *items);
 
