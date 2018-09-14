@@ -62,7 +62,7 @@ Privacy - Contacts Usage Description : 是否允许访问通讯录？（填写�
 
 ## TODO
 
-- [ ]直接在SDK里面实现增删改联系人
+- [  ] 直接在SDK里面实现增删改联系人
 
 --------------------------
 @end
