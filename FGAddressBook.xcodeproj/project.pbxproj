@@ -17,9 +17,13 @@
 		C3D152E9214BC18800CDEDAB /* FGAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D152E4214BC18800CDEDAB /* FGAddressBook.m */; };
 		C3D152EA214BC18800CDEDAB /* FGAddressBookTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D152E7214BC18800CDEDAB /* FGAddressBookTool.m */; };
 		C3D152EE214BC3FE00CDEDAB /* NSString+Chinese.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D152ED214BC3FD00CDEDAB /* NSString+Chinese.m */; };
+		C3D152F1214BD81400CDEDAB /* AddressBookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D152F0214BD81400CDEDAB /* AddressBookCell.m */; };
+		CEACF4381D2E28104C188E12 /* libPods-FGAddressbook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A25860C27DB293FBE87547 /* libPods-FGAddressbook.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10A25860C27DB293FBE87547 /* libPods-FGAddressbook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FGAddressbook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B6FA5A8174CBE7B7850118B /* Pods-FGAddressbook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FGAddressbook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FGAddressbook/Pods-FGAddressbook.debug.xcconfig"; sourceTree = "<group>"; };
 		C3D152C7214BC04900CDEDAB /* FGAddressbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FGAddressbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D152CA214BC04900CDEDAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C3D152CB214BC04900CDEDAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -38,6 +42,9 @@
 		C3D152E7214BC18800CDEDAB /* FGAddressBookTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGAddressBookTool.m; sourceTree = "<group>"; };
 		C3D152EC214BC3FD00CDEDAB /* NSString+Chinese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Chinese.h"; sourceTree = "<group>"; };
 		C3D152ED214BC3FD00CDEDAB /* NSString+Chinese.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Chinese.m"; sourceTree = "<group>"; };
+		C3D152EF214BD81400CDEDAB /* AddressBookCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressBookCell.h; sourceTree = "<group>"; };
+		C3D152F0214BD81400CDEDAB /* AddressBookCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressBookCell.m; sourceTree = "<group>"; };
+		D9F1C94D8F67237170B754D1 /* Pods-FGAddressbook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FGAddressbook.release.xcconfig"; path = "Pods/Target Support Files/Pods-FGAddressbook/Pods-FGAddressbook.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,18 +52,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEACF4381D2E28104C188E12 /* libPods-FGAddressbook.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0D1DC4AC431C256554D2E2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10A25860C27DB293FBE87547 /* libPods-FGAddressbook.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B275B8E59DE406F96BD80C29 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B6FA5A8174CBE7B7850118B /* Pods-FGAddressbook.debug.xcconfig */,
+				D9F1C94D8F67237170B754D1 /* Pods-FGAddressbook.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C3D152BE214BC04900CDEDAB = {
 			isa = PBXGroup;
 			children = (
 				C3D152E0214BC18700CDEDAB /* FGAddressBook */,
 				C3D152C9214BC04900CDEDAB /* sys */,
 				C3D152C8214BC04900CDEDAB /* Products */,
+				B275B8E59DE406F96BD80C29 /* Pods */,
+				A0D1DC4AC431C256554D2E2D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +102,8 @@
 				C3D152CB214BC04900CDEDAB /* AppDelegate.m */,
 				C3D152CD214BC04900CDEDAB /* ViewController.h */,
 				C3D152CE214BC04900CDEDAB /* ViewController.m */,
+				C3D152EF214BD81400CDEDAB /* AddressBookCell.h */,
+				C3D152F0214BD81400CDEDAB /* AddressBookCell.m */,
 				C3D152D0214BC04900CDEDAB /* Main.storyboard */,
 				C3D152D3214BC04B00CDEDAB /* Assets.xcassets */,
 				C3D152D5214BC04B00CDEDAB /* LaunchScreen.storyboard */,
@@ -122,9 +151,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3D152DD214BC04B00CDEDAB /* Build configuration list for PBXNativeTarget "FGAddressbook" */;
 			buildPhases = (
+				B34F86DF9FBB63F1A2D02E63 /* [CP] Check Pods Manifest.lock */,
 				C3D152C3214BC04900CDEDAB /* Sources */,
 				C3D152C4214BC04900CDEDAB /* Frameworks */,
 				C3D152C5214BC04900CDEDAB /* Resources */,
+				5215672FECC63F81B9733B7F /* [CP] Embed Pods Frameworks */,
+				B0A99D39BEF2653891ABD29C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -180,6 +212,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5215672FECC63F81B9733B7F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FGAddressbook/Pods-FGAddressbook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0A99D39BEF2653891ABD29C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FGAddressbook/Pods-FGAddressbook-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B34F86DF9FBB63F1A2D02E63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FGAddressbook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C3D152C3214BC04900CDEDAB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -190,6 +273,7 @@
 				C3D152EE214BC3FE00CDEDAB /* NSString+Chinese.m in Sources */,
 				C3D152DA214BC04B00CDEDAB /* main.m in Sources */,
 				C3D152E9214BC18800CDEDAB /* FGAddressBook.m in Sources */,
+				C3D152F1214BD81400CDEDAB /* AddressBookCell.m in Sources */,
 				C3D152CC214BC04900CDEDAB /* AppDelegate.m in Sources */,
 				C3D152E8214BC18800CDEDAB /* FGAddressBookModel.m in Sources */,
 			);
@@ -329,11 +413,13 @@
 		};
 		C3D152DE214BC04B00CDEDAB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B6FA5A8174CBE7B7850118B /* Pods-FGAddressbook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9P9D2224EQ;
 				INFOPLIST_FILE = "$(SRCROOT)/sys/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -346,11 +432,13 @@
 		};
 		C3D152DF214BC04B00CDEDAB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9F1C94D8F67237170B754D1 /* Pods-FGAddressbook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9P9D2224EQ;
 				INFOPLIST_FILE = "$(SRCROOT)/sys/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

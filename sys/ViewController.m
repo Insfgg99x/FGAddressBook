@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "FGAddressBook.h"
+#import "FGAddressBookTool.h"
+#import "AddressBookCell.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -73,16 +75,16 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cid"];
+    AddressBookCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cid"];
     if(!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cid"];
-        cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        cell = [[AddressBookCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cid"];
     }
     FGAddressBookModel *m = self.addressBookArray[indexPath.row];
-    cell.textLabel.text = m.name;
-    cell.detailTextLabel.text = m.phone;
-    cell.imageView.image = m.thumbnailImage;
+    [cell bind:m];
     return cell;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 60;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     FGAddressBookModel *m = self.addressBookArray[indexPath.row];
