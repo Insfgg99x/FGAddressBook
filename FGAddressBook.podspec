@@ -9,7 +9,7 @@ s.authors      = { "CGPointZero" => "newbox0512@yahoo.com" }
 s.source       = { :git => "https://github.com/Insfgg99x/FGAddressBook.git", :tag => "1.0" }
 s.frameworks   = 'Foundation','UIKit', 'Contacts'
 s.platform     = :ios, '6.0'
-s.source_files = 'FGAddressBook/*.{h,m}'
+s.source_files = 'FGAddressBook/**/*.{h,m}'
 s.requires_arc = true
 #s.dependency 'SDWebImage
 
