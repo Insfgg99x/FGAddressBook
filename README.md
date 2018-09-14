@@ -32,7 +32,7 @@
 
 - 获取通讯录联系人列表
 
-```
+```swift
 [[FGAddressBook shared] authAddressBook:^(BOOL granted) {
     if(!granted) {
         return;
@@ -51,6 +51,13 @@
 pod repo update
 pod 'FGAddressBook'
 ```
+
+👉在`info.plist`中添加通讯录访问授权说明：
+
+```swift
+Privacy - Contacts Usage Description : 是否允许访问通讯录？（填写自己产品的访问说明）
+```
+👉温馨提示：请在真机上运行此demo
 
 --------------------------
 @end
